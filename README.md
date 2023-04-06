@@ -1,38 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Note Taking App
+
+First Next.js Project,
+
+### Technologies Used:
+
+- Next.js 13
+- Pocketbase.
+- TypeScript
+- Turbo Pack (Build Tool By vercel(company that maintains next.js))
 
 ## Getting Started
 
-First, run the development server:
+This is a project bootstrapped with .
+
+**First,** Project Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npx create-next-app@latest --ts my-first-app
+cd my-first-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Second,**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Download Pocketbase from [pocketbase.io](pocketbase.io)
+- Navigate to the unzipped directory  
+   `cd pocketbase_0.7.9_darwin_arm64`
+- Move its executable file to root directory of your project
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Start Pocketbase:  
+   `./pocketbase serve`
+- Open the [Admin UI](http://127.0.0.1:8090/_/), create collection, and update security rules to allow read/write access.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**Third,** Run the development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- If using Pocket Base SDK
+  uncomment in notes/page.tsx and comment out the fetch api lines
 
-## Learn More
+  ```bash
+     npm install pocketbase
+  ```
 
-To learn more about Next.js, take a look at the following resources:
+- Edit _package.json_ to use build tool [Turbo Pack](https://turbo.build/pack)  
+   `"dev": "next dev --turbo",`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Start Development Server
+  ```bash
+      npm run dev
+  ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Please make sure to update tests as appropriate.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Credits
+
+[@Beyond Fireship](https://www.youtube.com/watch?v=__mSgDEOyv8)
